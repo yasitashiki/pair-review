@@ -122,7 +122,7 @@ class PierreBridge {
 
   getThemeConfig() {
     return {
-      dark: 'github-dark',
+      dark: 'github-dark-high-contrast',
       light: 'github-light',
     };
   }
