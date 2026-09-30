@@ -1947,6 +1947,7 @@ class PierreBridge {
           <div class="user-comment-header-left">
             <span class="comment-origin-icon">${commentIcon}</span>
             <span class="user-comment-line-info">${lineInfo}</span>
+            ${comment.id ? `<span class="pr-suggestion-id" title="Comment ID">#${comment.id}</span>` : ''}
             ${metadataHTML}
           </div>
           <div class="user-comment-actions">
@@ -2023,6 +2024,7 @@ class PierreBridge {
     container.innerHTML = `
       <div class="ai-suggestion-header">
         <div class="ai-suggestion-header-left">
+          ${suggestion.id ? `<span class="pr-suggestion-id" title="Suggestion ID">#${suggestion.id}</span>` : ''}
           <span class="ai-suggestion-category">${escapeHtml(suggestion.type || '')}</span>
           <span class="ai-title">${escapeHtml(suggestion.title || '')}</span>
         </div>

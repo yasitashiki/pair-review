@@ -1684,7 +1684,7 @@ class AIPanel {
                     ${indicator}
                     <div class="finding-content">
                         <span class="finding-title">${this.escapeHtml(title)}</span>
-                        ${category || finding.severity ? `<span class="finding-meta">${category ? `<span class="finding-category">${this.escapeHtml(category)}</span>` : ''}${finding.severity ? `<span class="severity-badge severity-${finding.severity}">${this.escapeHtml(finding.severity.toUpperCase())}</span>` : ''}</span>` : ''}
+                        <span class="finding-meta">${finding.id ? `<span class="pr-suggestion-id" title="Suggestion ID">#${finding.id}</span>` : ''}${category ? `<span class="finding-category">${this.escapeHtml(category)}</span>` : ''}${finding.severity ? `<span class="severity-badge severity-${finding.severity}">${this.escapeHtml(finding.severity.toUpperCase())}</span>` : ''}</span>
                         ${fileName ? `<span class="finding-location">${this.escapeHtml(fileName)}</span>` : ''}
                         ${dismissalReason ? `<span class="finding-dismissal-reason">${this.escapeHtml(this.truncateText(dismissalReason, 60))}</span>` : ''}
                     </div>
@@ -1760,6 +1760,7 @@ class AIPanel {
                     <span class="comment-icon">${icon}</span>
                     <div class="finding-content">
                         <span class="finding-title">${this.escapeHtml(title)}</span>
+                        ${comment.id ? `<span class="finding-meta"><span class="pr-suggestion-id" title="Comment ID">#${comment.id}</span></span>` : ''}
                         ${fileName ? `<span class="finding-location">${this.escapeHtml(fileName)}${isFileLevel ? ' <span class="file-level-indicator">(file)</span>' : ''}</span>` : ''}
                     </div>
                 </button>

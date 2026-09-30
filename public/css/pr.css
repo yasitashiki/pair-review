@@ -14032,3 +14032,33 @@ diffs-container {
     animation: loop-spin 1.4s linear infinite !important;
   }
 }
+
+/* Suggestion / comment ID badge.
+   IDs let people refer to a specific finding when discussing it with an agent
+   ("#42 is a false positive") instead of describing it. */
+.pr-suggestion-id {
+  flex-shrink: 0;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: rgba(110, 118, 129, 0.16);
+  border: 1px solid rgba(110, 118, 129, 0.24);
+  color: #7d8590;
+  user-select: all;  /* one click selects the whole ID for copying */
+}
+
+[data-theme="dark"] .pr-suggestion-id {
+  background: rgba(110, 118, 129, 0.18);
+  border-color: rgba(110, 118, 129, 0.28);
+  color: #8b949e;
+}
+
+/* The AI panel is narrow, so its badges run one step smaller. */
+.finding-meta .pr-suggestion-id {
+  padding: 0 4px;
+  font-size: 0.625rem;
+  line-height: 1.5;
+}
