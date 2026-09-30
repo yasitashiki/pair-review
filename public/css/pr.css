@@ -14085,3 +14085,40 @@ diffs-container {
   color: #6e93b8;
   border: 1px solid rgba(88, 166, 255, 0.20);
 }
+
+/* Inline code in finding and comment bodies.
+   The default color is --ai-secondary (#fbbf24), an accent meant for AI
+   identity. Applied to inline code it makes every identifier flare against
+   the prose, which is worst in languages where short Latin identifiers sit
+   inside longer non-Latin sentences. Use the body text color instead and let
+   a faint background mark the span as code. */
+[data-theme="dark"] .ai-suggestion-body code,
+[data-theme="dark"] .user-comment-body code,
+[data-theme="dark"] .external-comment-body code,
+[data-theme="dark"] .file-comment-body .comment-text code {
+  color: #c9d1d9;
+  background: rgba(110, 118, 129, 0.18);
+  border: 1px solid rgba(110, 118, 129, 0.15);
+}
+
+/* Inside a pre block the block already carries the background. */
+[data-theme="dark"] .ai-suggestion-body pre code,
+[data-theme="dark"] .user-comment-body pre code,
+[data-theme="dark"] .external-comment-body pre code {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+/* A user comment's purple frame competed with its contents. Keep the left
+   rule as the origin marker and desaturate the rest. */
+[data-theme="dark"] .user-comment {
+  background: rgba(139, 148, 158, 0.06);
+  border-color: rgba(139, 148, 158, 0.30);
+  border-left-color: #7d8590;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .comment-icon {
+  color: #8b949e;
+}
