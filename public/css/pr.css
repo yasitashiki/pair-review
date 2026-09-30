@@ -14062,3 +14062,26 @@ diffs-container {
   font-size: 0.625rem;
   line-height: 1.5;
 }
+
+/* Dark theme severity colors.
+   The defaults invert importance: minor (#fff176) was the brightest of the
+   three, so the least important badge drew the most attention. Order the
+   colors by severity instead, and use translucent fills so the badges do not
+   compete with the finding text. */
+[data-theme="dark"] .severity-critical {
+  background: rgba(248, 81, 73, 0.16);
+  color: #ff8a80;
+  border: 1px solid rgba(248, 81, 73, 0.35);
+}
+
+[data-theme="dark"] .severity-medium {
+  background: rgba(210, 153, 34, 0.12);
+  color: #d4a72c;
+  border: 1px solid rgba(210, 153, 34, 0.25);
+}
+
+[data-theme="dark"] .severity-minor {
+  background: rgba(88, 166, 255, 0.10);
+  color: #6e93b8;
+  border: 1px solid rgba(88, 166, 255, 0.20);
+}
