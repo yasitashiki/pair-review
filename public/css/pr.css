@@ -14122,3 +14122,22 @@ diffs-container {
 [data-theme="dark"] .comment-icon {
   color: #8b949e;
 }
+
+/* Wider leading for finding bodies. Non-Latin prose reads cramped at the
+   default line height, especially with inline code spans breaking the line. */
+[data-theme="dark"] .ai-suggestion-body,
+[data-theme="dark"] .user-comment-body {
+  line-height: 1.85;
+}
+
+/* Separate the finding title from its body when the comment format puts the
+   title in a heading. */
+[data-theme="dark"] .user-comment-body h3,
+[data-theme="dark"] .ai-suggestion-body h3 {
+  margin-top: 0.2em;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid rgba(110, 118, 129, 0.25);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
